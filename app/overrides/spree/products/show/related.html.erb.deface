@@ -1,0 +1,9 @@
+<!-- insert_after '#product-description' -->
+<div id="related-products" data-hook="related_products">
+  <%= image_tag 'select2-spinner.gif' %>
+</div>
+<script><!--
+$.get( '<%= @product.permalink %>/related', function ( data ) {
+  $( "#related-products" ).html( data );
+} )
+//--></script>

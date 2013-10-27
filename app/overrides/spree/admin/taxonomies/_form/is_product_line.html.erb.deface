@@ -1,0 +1,6 @@
+<!-- insert_bottom 'div' -->
+<%= f.field_container :is_product_line do %>
+  <%= f.label :is_product_line, Spree.t(:is_product_line) %><br />
+  <%= error_message_on :taxonomy, :is_product_line, :class => 'fullwidth title' %>
+  <%= check_box :taxonomy, :is_product_line %>
+<% end %>
