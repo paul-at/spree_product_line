@@ -1,7 +1,7 @@
 <% if products.any? %>
 <ul class="inline product-listing related-products" data-hook>
   <% products.each do |product| %>
-    <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+    <li id="product_<%= product.id %>" class="columns two <%= cycle("alpha", "", "", "", "omega", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
       <div class="product-image">
         <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
       </div>
@@ -11,4 +11,9 @@
   <% end %>
   <% reset_cycle("classes") %>
 </ul>
+
+<% if products.respond_to?(:num_pages) && products.num_pages > 1 %>
+<div style="clear:both">
+	<%= link_to Spree.t('more') + ' ' + taxon.name + ' >>', spree.nested_taxons_path(taxon.permalink) %>
+<% end %>
 <% end %>

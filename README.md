@@ -1,7 +1,7 @@
 spree_product_line
 ================
 
-This extensions adds ability to display related products on a product page.
+This extension adds ability to display related products on a product page.
 
 A built-in taxonomy functionality is used to define what products are related.
 After installation, extension adds 'Is Product Line' flag to Taxonomy - Edit
