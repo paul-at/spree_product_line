@@ -3,7 +3,7 @@
   <%= image_tag 'select2-spinner.gif' %>
 </div>
 <script><!--
-$.get( '<%= @product.permalink %>/related', function ( data ) {
+$.get( '<%= @product.slug %>/related', function ( data ) {
   $( "#related-products" ).html( data );
 } )
 //--></script>

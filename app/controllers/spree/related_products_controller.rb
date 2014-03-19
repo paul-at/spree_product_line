@@ -3,7 +3,7 @@ module Spree
     @@display_related_items = 5
     
     def get
-      product = Product.find_by_permalink!(params[:permalink])
+      product = Product.find_by_slug!(params[:permalink])
       @categories = []
       product.taxons.each do |taxon|
         if taxon.taxonomy.is_product_line
