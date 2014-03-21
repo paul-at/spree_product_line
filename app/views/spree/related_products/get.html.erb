@@ -2,5 +2,5 @@
   <h6 class="product-section-title"><%= link_to category[:taxon].pretty_name, spree.nested_taxons_path(category[:taxon].permalink) %></h6>
   <div><%= raw category[:taxon].description %></div>
   <%= render :partial => 'products', :locals => { :products => category[:searcher].retrieve_products, :taxon => category[:taxon] } %>
-  <hr style="clear:both" class="clearfix">
+  <hr style="clear:both">
 <% end %>
